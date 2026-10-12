@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Task Data Job",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "project",
+    "target",
+    "action",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "job_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+    },
+    "project": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,64}$"
+    },
+    "target": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,64}$"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "store_json",
+        "extract_urls",
+        "noop"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
