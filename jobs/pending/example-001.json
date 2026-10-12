@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "job_id": "example-001",
+  "project": "demo",
+  "target": "windows-agent-01",
+  "action": "store_json",
+  "payload": {
+    "title": "Example public AI handoff",
+    "source_url": "https://example.com",
+    "notes": "Demonstration only. No sensitive data."
+  },
+  "created_at": "2026-10-12T01:00:00Z"
+}
